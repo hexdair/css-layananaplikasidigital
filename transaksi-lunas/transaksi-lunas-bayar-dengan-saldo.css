@@ -276,5 +276,5 @@
 
     @media (max-width:360px) {
       .arc-header { padding: 40px 18px 80px; }
-      .card, .steps-card, .btn-area { width: calc(100% - 24px); }
-      }
+      .card, .btn-area { width: calc(100% - 24px); }
+    }
