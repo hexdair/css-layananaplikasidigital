@@ -1,4 +1,21 @@
-/* KHFYv2 specific colors/badges from reference (approximated if not defined) */
+:root {
+      --primary-color: {{warna_primary}};
+      --primary-light: {{warna_primary}};
+      --primary-dark: {{warna_primary}};
+      --secondary-color: #f9f7ff;
+      --white: #ffffff;
+      --gray-light: #f8f9fa;
+      --gray-medium: #e9ecef;
+      --gray-dark: #6c757d;
+      --success: #28a745;
+      --process: #17a2b8;
+      --pending: #ffc107;
+      --failed: #dc3545;
+      --border-radius: 12px;
+      --shadow: 0 4px 12px rgba(103, 58, 183, 0.1);
+      --transition: all 0.3s ease;
+
+      /* KHFYv2 specific colors/badges from reference (approximated if not defined) */
       --badge-terjadwal-bg: #e0f7fa; /* Light cyan */
       --badge-terjadwal-text: #00796b; /* Dark cyan */
       --badge-dibatalkan-bg: #ffebee; /* Light red */
@@ -926,8 +943,8 @@
     .receipt-action-card .receipt-action-title { font-weight: 700; font-size: 14.5px; color:#241a3a; }
     .receipt-action-card .receipt-action-sub { font-size: 12px; color:#7a6f8c; margin-top:2px; }
     .receipt-action-card .receipt-action-arrow { color:#b9aed1; font-size: 13px; }
-    .receipt-action-download .receipt-action-icon { background: rgba(103,58,183,0.10); color:#673ab7; }
-    .receipt-action-print { background: linear-gradient(135deg,#673ab7 0%,#512a9b 100%); }
+    .receipt-action-download .receipt-action-icon { background: rgba(103,58,183,0.10); color:#00897B; }
+    .receipt-action-print { background: linear-gradient(135deg,#00897B 0%,#512a9b 100%); }
     .receipt-action-print .receipt-action-title,
     .receipt-action-print .receipt-action-sub,
     .receipt-action-print .receipt-action-arrow { color: #fff; }
@@ -951,15 +968,15 @@
     }
     .btn-receipt-icon {
       background: transparent;
-      border: 1px solid #673ab7;
-      color: #673ab7;
+      border: 1px solid #00897B;
+      color: #00897B;
       padding: 4px 10px;
       transition: all .15s ease;
     }
     .btn-receipt-icon:hover, .btn-receipt-icon:focus {
-      background: #673ab7;
+      background: #00897B;
       color: #fff;
-      border-color: #673ab7;
+      border-color: #00897B;
       box-shadow: 0 2px 6px rgba(103,58,183,.3);
     }
     .btn-receipt-icon i { font-size: 16px; }
