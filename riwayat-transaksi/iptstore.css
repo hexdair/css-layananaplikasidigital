@@ -1,19 +1,4 @@
-:root {
-      --primary-color: {{warna_primary}};
-      --primary-light: {{warna_primary}};
-      --primary-dark: {{warna_primary}};
-      --secondary-color: #f9f7ff;
-      --white: #ffffff;
-      --gray-light: #f8f9fa;
-      --gray-medium: #e9ecef;
-      --gray-dark: #6c757d;
-      --success: #28a745;
-      --process: #17a2b8;
-      --pending: #ffc107;
-      --failed: #dc3545;
-      --border-radius: 12px;
-      --shadow: 0 4px 12px rgba(103, 58, 183, 0.1);
-      --transition: all 0.3s ease;
+
 
       /* KHFYv2 specific colors/badges from reference (approximated if not defined) */
       --badge-terjadwal-bg: #e0f7fa; /* Light cyan */
