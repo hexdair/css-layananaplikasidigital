@@ -1,6 +1,4 @@
-
-
-      /* KHFYv2 specific colors/badges from reference (approximated if not defined) */
+/* KHFYv2 specific colors/badges from reference (approximated if not defined) */
       --badge-terjadwal-bg: #e0f7fa; /* Light cyan */
       --badge-terjadwal-text: #00796b; /* Dark cyan */
       --badge-dibatalkan-bg: #ffebee; /* Light red */
@@ -929,7 +927,7 @@
     .receipt-action-card .receipt-action-sub { font-size: 12px; color:#7a6f8c; margin-top:2px; }
     .receipt-action-card .receipt-action-arrow { color:#b9aed1; font-size: 13px; }
     .receipt-action-download .receipt-action-icon { background: rgba(103,58,183,0.10); color:#00897B; }
-    .receipt-action-print { background: linear-gradient(135deg,#00897B 0%,#512a9b 100%); }
+    .receipt-action-print { background: linear-gradient(135deg,#00897B 0%,#00897B 100%); }
     .receipt-action-print .receipt-action-title,
     .receipt-action-print .receipt-action-sub,
     .receipt-action-print .receipt-action-arrow { color: #fff; }
@@ -975,4 +973,4 @@
       #receiptPrintArea .receipt-paper {
         box-shadow: none; margin: 0 auto;
       }
-          }
+                         }
