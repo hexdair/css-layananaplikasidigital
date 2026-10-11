@@ -23,6 +23,10 @@ body{font-family:'Plus Jakarta Sans',system-ui,-apple-system,'Segoe UI',Roboto,s
 .amount{font-size:26px;font-weight:700;color:var(--ok);margin:14px 0 14px;letter-spacing:.3px}
 .card[data-state=pending] .badge{background:var(--warn-soft);color:var(--warn)}
 .card[data-state=pending] .amount{color:var(--warn)}
+.card[data-state=process] .badge{background:var(--proc-soft);color:var(--proc)}
+.card[data-state=process] .amount{color:var(--proc)}
+.card[data-state=process] .thanks{background:var(--proc-soft);color:var(--proc)}
+.card[data-state=process] .badge svg{animation:spin 2.4s linear infinite}
 .card[data-state=failed] .badge{background:var(--err-soft);color:var(--err)}
 .card[data-state=failed] .amount{color:var(--err)}
 
