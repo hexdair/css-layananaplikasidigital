@@ -133,3 +133,38 @@ body{font-family:'Plus Jakarta Sans',system-ui,-apple-system,'Segoe UI',Roboto,s
 .cs-menu .ic{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;flex-shrink:0}
 .cs-menu .ic svg{width:16px;height:16px}
 .cs-menu .wa{background:#25d366}.cs-menu .tg{background:#229ed9}
+
+/* ─── Menu radial "Struk" (animasi dari Uiverse.io by mamyapro123, disesuaikan: 2 menu) ─── */
+.strukov{position:fixed;inset:0;z-index:80;display:none;align-items:center;justify-content:center;background:rgba(24,14,48,.68);opacity:0;transition:opacity .3s ease}
+.strukov.open{display:flex}
+.strukov.in{opacity:1}
+.radial-menu-container{--ink:#1f2937;--c-blue:#89b4ff;--c-red:#ff8989;--c-yellow:#ffdf70;--c-green:#89ffb4;
+  --radius-1:50% 45% 55% 40% / 55% 45% 50% 50%;--radius-2:40% 60% 45% 55% / 50% 55% 40% 60%;--radius-3:55% 45% 50% 55% / 45% 55% 60% 40%;
+  position:relative;width:min(100%,420px);aspect-ratio:1/1;margin:0 auto;display:flex;align-items:center;justify-content:center;
+  font-size:15px;font-family:inherit;background:transparent;padding:20px;box-sizing:border-box;overflow:hidden}
+.radial-menu-container .doodle-decorations{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;opacity:0;transform:scale(.9);transition:all .5s cubic-bezier(.68,-.55,.265,1.55)}
+.radial-menu-container:has(.menu-toggle:checked) .doodle-decorations{opacity:1;transform:scale(1)}
+.radial-menu-container .menu-toggle{position:absolute;opacity:0;pointer-events:none}
+.radial-menu-container .center-icon{position:absolute;left:50%;top:50%;width:4.4em;height:4.4em;transform:translate(-50%,-50%);background:#fff;border:3.5px solid var(--ink);border-radius:45% 55% 45% 55% / 55% 45% 55% 45%;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:100;box-shadow:5px 5px 0 var(--ink);transition:transform .2s cubic-bezier(.4,0,.2,1),box-shadow .2s ease}
+.radial-menu-container .center-icon:active{transform:translate(-50%,-50%) scale(.95);box-shadow:2px 2px 0 var(--ink)}
+.radial-menu-container .center-icon svg{width:2.2em;height:2.2em;color:var(--ink);transition:transform .5s cubic-bezier(.68,-.55,.265,1.55)}
+.radial-menu-container .menu-toggle:checked ~ .center-icon svg{transform:rotate(180deg) scale(.9)}
+.radial-menu-container .connection-lines{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1;overflow:visible}
+.radial-menu-container .line{fill:none;stroke-width:4.5;stroke-linecap:round;opacity:0;stroke-dasharray:200;stroke-dashoffset:200;filter:url(#handDrawn) drop-shadow(2px 2px 0 rgba(0,0,0,.1));transition:opacity .3s ease,stroke-dashoffset .6s cubic-bezier(.4,0,.2,1)}
+.radial-menu-container .line-3{stroke:var(--c-yellow)}
+.radial-menu-container .line-7{stroke:var(--c-blue)}
+.radial-menu-container .menu-toggle:checked ~ .connection-lines .line{opacity:1;stroke-dashoffset:0}
+.radial-menu-container .menu-toggle:checked ~ .connection-lines .line-3{transition-delay:.15s}
+.radial-menu-container .menu-toggle:checked ~ .connection-lines .line-7{transition-delay:.3s}
+.radial-menu-container .menu-item{position:absolute;left:50%;top:50%;opacity:0;transform:translate(-50%,-50%) scale(0) rotate(-20deg);display:flex;flex-direction:column;align-items:center;gap:.6em;transition:opacity .35s ease,top .55s cubic-bezier(.68,-.55,.265,1.55),left .55s cubic-bezier(.68,-.55,.265,1.55),transform .55s cubic-bezier(.68,-.55,.265,1.55);z-index:10}
+.radial-menu-container .menu-toggle:checked ~ .menu-item{opacity:1;transform:translate(-50%,-50%) scale(1) rotate(0)}
+.radial-menu-container .menu-toggle:checked ~ .item-3{top:50%;left:82%;transition-delay:.18s;animation:subtle-float 2.8s ease-in-out infinite .5s}
+.radial-menu-container .menu-toggle:checked ~ .item-7{top:50%;left:18%;transition-delay:.38s;animation:subtle-float 3.4s ease-in-out infinite .1s}
+.radial-menu-container .icon-circle{position:relative;width:3.8em;height:3.8em;background:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;border:3px solid var(--ink);padding:0;color:var(--p);transition:transform .2s ease,box-shadow .2s ease}
+.radial-menu-container .item-3 .icon-circle{border-radius:var(--radius-3);box-shadow:4px -4px 0 var(--c-yellow)}
+.radial-menu-container .item-7 .icon-circle{border-radius:var(--radius-3);box-shadow:4px -4px 0 var(--c-blue)}
+.radial-menu-container .icon-circle:active{transform:scale(.92);box-shadow:2px 2px 0 var(--ink)!important}
+.radial-menu-container .icon-circle svg{width:1.8em;height:1.8em}
+.radial-menu-container .item-label{background:#fff;color:var(--ink);border:2px solid var(--ink);border-radius:12px 12px 12px 0;padding:.25em .7em;font-size:.82em;font-weight:700;white-space:nowrap;box-shadow:3px 3px 0 var(--c-yellow);transform:rotate(-3deg)}
+@keyframes subtle-float{0%,100%{transform:translate(-50%,-50%) translateY(0)}50%{transform:translate(-50%,-50%) translateY(-5px)}}
+@media print{.strukov{display:none!important}}
